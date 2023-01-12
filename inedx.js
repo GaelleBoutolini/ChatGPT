@@ -1,0 +1,1 @@
+let questions = ["Bonjour", "comment vas-tu ?", "ça va?", "Quelle heure est-il ?", "Qui est-tu ?"]
