@@ -45,30 +45,36 @@ btnValidate.addEventListener("click", () => {
             }
 
             inputQuestion.value = ""
-            addEventToThumbs(index);
+            addEventToThumbs();
         }
 
     }
 })
 
-function addEventToThumbs(index) {
+function addEventToThumbs() {
     let thumbsUp = document.querySelectorAll(".thumbUp")
-    thumbsUp[index].addEventListener("click", () => {
-        if (thumbsUp[index].style.color === "blue") {
-            thumbsUp[index].style.color = "white"
-        } else {
-            thumbsUp[index].style.color = "blue";
-            thumbsDown[index].style.color = "white";
+    for (let b = 0; b < thumbsUp.length; b++) {
+        thumbsUp[b].addEventListener("click", () => {
+            if (thumbsUp[b].style.color === "blue") {
+                thumbsUp[b].style.color = "white"
+            } else {
+                thumbsUp[b].style.color = "blue";
+                thumbsDown[b].style.color = "white";
+            }
         }
-    })
+        )
+    }
 
     let thumbsDown = document.querySelectorAll(".thumbDown")
-    thumbsDown[index].addEventListener("click", () => {
-        if (thumbsDown[index].style.color === "blue") {
-            thumbsDown[index].style.color = "white";
-        } else {
-            thumbsDown[index].style.color = "blue";
-            thumbsUp[index].style.color = "white";
+    for (let b = 0; b < thumbsUp.length; b++) {
+        thumbsDown[b].addEventListener("click", () => {
+            if (thumbsDown[b].style.color === "blue") {
+                thumbsDown[b].style.color = "white";
+            } else {
+                thumbsDown[b].style.color = "blue";
+                thumbsUp[b].style.color = "white";
+            }
         }
-    })
+        )
+    }
 }
