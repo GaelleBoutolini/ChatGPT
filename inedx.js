@@ -77,9 +77,9 @@ btnValidate.addEventListener("click", () => {
                 console.log(filteredResponses)
                 for (let j = 0; j < filteredResponses.length; j++) {
                     filteredResponses[j].style.animation = "none"
-                    inputQuestion.value = ""
-                    addEventToThumbs();
                 }
+                inputQuestion.value = ""
+                addEventToThumbs();
             }
             return;
         } else {
