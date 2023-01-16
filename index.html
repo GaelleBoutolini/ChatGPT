@@ -12,7 +12,7 @@
 </head>
 
 <body class="d-flex justify-content-between">
-  <div class="d-flex flex-column flex-md-row w-25 min-vh-100 position-fixed">
+  <div class="navbar_container d-flex flex-column flex-md-row min-vh-100 position-fixed">
     <nav class="bg-dark navbar navbar-dark w-100 d-flex flex-md-column align-items-start flex-shrink-1 p-3 col-4">
       <input class="" type="text" placeholder="+ New chat">
       <div class="navbar-text text-wrap  align-middle  ">
@@ -40,25 +40,28 @@
     </nav>
   </div>
 
-  <div class="w-75 position-fixed end-0 bottom-0">
+  <div class="question_response_container position-fixed end-0 bottom-0 my-2">
     <div id="response"></div>
-    <div id="groot_mode">
-      <span>Mode Groot</span>
-      <input type="checkbox" id="btn_groot">
-      <label for="btn_groot"><span>&#10003;</span></label>
+    <div>
+      <div id="groot_mode">
+        <span>Mode Groot</span>
+        <input type="checkbox" id="btn_groot">
+        <label for="btn_groot"><span>&#10003;</span></label>
+      </div>
+      <div class="p-3 m-auto d-flex justify-content-between align-items-center rounded position-relative mt-4 mb-3"
+        id="input_container">
+        <input type="text" class="border-0 text-white" id="question" autofocus>
+        <button class="position-absolute end-0 me-3 border-0 fs-4" id="validate">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" class="h-4 w-4 rotate-90"
+            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z">
+            </path>
+          </svg>
+        </button>
+      </div>
     </div>
-    <div class="p-3 m-auto d-flex justify-content-between align-items-center rounded position-relative mt-4"
-      id="input_container">
-      <input type="text" class="border-0 text-white" id="question" autofocus>
-      <button class="position-absolute end-0 me-3 border-0 fs-4" id="validate">
-        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" class="h-4 w-4 rotate-90"
-          height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z">
-          </path>
-        </svg>
-      </button>
-    </div>
+
   </div>
 
 

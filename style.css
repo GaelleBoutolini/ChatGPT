@@ -4,8 +4,12 @@ body {
     background-color: #343541;
 }
 
-nav {
-    width: 100%;
+.navbar_container {
+    width: 15%;
+}
+
+.question_response_container {
+    width: 85%;
 }
 
 footer {
