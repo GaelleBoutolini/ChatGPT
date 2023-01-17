@@ -7,6 +7,7 @@ let groot = document.querySelector("#btn_groot");
 let sentencesGroot = ["Je suis Groot !", "Je suis Groot ?", "Je suis Groot.", "Je suis Groot...", "Je suis Groot~", "JE SUIS GROOT !!!!!"]
 let containerMain = document.querySelector(".container_main");
 
+
 document.addEventListener("keydown", (e) => {
     if (e.code === "Enter" || e.KeyboardEvent.keyCode === 13) {
         btnValidate.click();

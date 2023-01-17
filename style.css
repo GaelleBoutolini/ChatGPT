@@ -17,6 +17,16 @@ body {
     width: 60%;
 }
 
+.question_response_container,
+.container_main {
+    width: 85%;
+}
+
+.box_container {
+    width: 60%;
+}
+
+
 footer {
     background-color: #343541;
     color: aliceblue;
