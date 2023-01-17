@@ -5,6 +5,7 @@ let btnValidate = document.querySelector("#validate");
 let responseContainer = document.querySelector("#response");
 let groot = document.querySelector("#btn_groot");
 let sentencesGroot = ["Je suis Groot !", "Je suis Groot ?", "Je suis Groot.", "Je suis Groot...", "Je suis Groot~", "JE SUIS GROOT !!!!!"]
+let containerMain = document.querySelector(".container_main");
 
 document.addEventListener("keydown", (e) => {
     if (e.code === "Enter" || e.KeyboardEvent.keyCode === 13) {
@@ -13,6 +14,7 @@ document.addEventListener("keydown", (e) => {
 })
 
 btnValidate.addEventListener("click", () => {
+    containerMain.innerHTML = "";
     if (groot.checked) {
         console.log("Je suis dans le mode Groot")
         let sentence = randomArrayElement(sentencesGroot)

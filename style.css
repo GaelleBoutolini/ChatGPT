@@ -8,8 +8,13 @@ body {
     width: 15%;
 }
 
-.question_response_container {
+.question_response_container,
+.container_main {
     width: 85%;
+}
+
+.box_container {
+    width: 60%;
 }
 
 footer {
@@ -21,6 +26,14 @@ footer {
 #input_container {
     background: rgb(64, 65, 79);
     width: 60%;
+}
+
+.box {
+    background: rgb(64, 65, 79);
+}
+
+.footer_paragraph {
+    font-size: 14px;
 }
 
 input:focus {
@@ -78,6 +91,9 @@ svg {
     background: transparent;
 }
 
+#groot_mode_container {
+    width: 60%;
+}
 
 #groot_mode label {
     width: 80px;
@@ -86,8 +102,6 @@ svg {
     background: #fff;
     border-radius: 20px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
 }
 
 label span {
