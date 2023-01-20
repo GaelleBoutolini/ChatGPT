@@ -8,8 +8,7 @@ body {
     width: 15%;
 }
 
-.question_response_container,
-.container_main {
+.main {
     width: 85%;
 }
 
@@ -139,8 +138,7 @@ label span {
         margin-top: 30px;
     }
 
-    .question_response_container,
-    .container_main {
+    .main {
         width: 100%;
         position: static !important;
     }
