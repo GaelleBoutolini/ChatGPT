@@ -8,6 +8,11 @@ let sentencesGroot = ["Je suis Groot !", "Je suis Groot ?", "Je suis Groot.", "J
 let containerMain = document.querySelector(".container_main");
 
 
+// Début du js pour apparition de modal
+document.addEventListener('DOMContentLoaded', function () {
+    $('#modal1').modal('show');
+});
+
 document.addEventListener("keydown", (e) => {
     if (e.code === "Enter" || e.KeyboardEvent.keyCode === 13) {
         btnValidate.click();
@@ -15,7 +20,6 @@ document.addEventListener("keydown", (e) => {
 })
 
 btnValidate.addEventListener("click", () => {
-
     containerMain.innerHTML = "";
     if (groot.checked) {
         console.log("Je suis dans le mode Groot")
