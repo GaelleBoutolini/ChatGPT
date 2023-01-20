@@ -8,6 +8,14 @@ body {
     width: 15%;
 }
 
+.main {
+    width: 85%;
+}
+
+.box_container {
+    width: 60%;
+}
+
 .question_response_container,
 .container_main {
     width: 85%;
@@ -16,6 +24,7 @@ body {
 .box_container {
     width: 60%;
 }
+
 
 footer {
     background-color: #343541;
@@ -91,10 +100,6 @@ svg {
     background: transparent;
 }
 
-#groot_mode_container {
-    width: 60%;
-}
-
 #groot_mode label {
     width: 80px;
     height: 40px;
@@ -125,4 +130,30 @@ label span {
     margin-left: 43px;
     background: #5bce5b;
     color: #fff;
+}
+
+@media (max-width:992px) {
+
+    h1 {
+        margin-top: 30px;
+    }
+
+    .main {
+        width: 100%;
+        position: static !important;
+    }
+
+    .box_container {
+        width: 100%;
+    }
+
+    .box-container-principal {
+        width: 100%;
+    }
+
+    .example,
+    .Capabilities,
+    .Limitations {
+        width: 90%;
+    }
 }
