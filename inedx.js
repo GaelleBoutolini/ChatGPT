@@ -18,7 +18,6 @@ document.addEventListener("keydown", (e) => {
         btnValidate.click();
     }
 })
-
 btnValidate.addEventListener("click", () => {
     containerMain.innerHTML = "";
     if (groot.checked) {
@@ -75,7 +74,6 @@ btnValidate.addEventListener("click", () => {
                 </div>
             </div>
             `;
-
             let responseParagraph = document.querySelectorAll(".response_paragraph");
             if (responseParagraph.length !== 0) {
                 console.log(responseParagraph)
@@ -93,7 +91,6 @@ btnValidate.addEventListener("click", () => {
         } else {
             dontHaveThisQuestion = true;
         }
-
         let responseParagraph = document.querySelectorAll(".response_paragraph");
         if (responseParagraph.length !== 0) {
             console.log(responseParagraph)
@@ -136,7 +133,6 @@ btnValidate.addEventListener("click", () => {
                 </div>
             </div>
             `;
-
         let responseParagraph = document.querySelectorAll(".response_paragraph");
         if (responseParagraph.length !== 0) {
             console.log(responseParagraph)
@@ -151,7 +147,6 @@ btnValidate.addEventListener("click", () => {
         }
     }
 })
-
 function addEventToThumbs() {
     console.log("Je met des écouteurs sur mes thumbs")
     let thumbsUp = document.querySelectorAll(".thumbUp")
@@ -166,7 +161,6 @@ function addEventToThumbs() {
         }
         )
     }
-
     let thumbsDown = document.querySelectorAll(".thumbDown")
     for (let b = 0; b < thumbsUp.length; b++) {
         thumbsDown[b].addEventListener("click", () => {
