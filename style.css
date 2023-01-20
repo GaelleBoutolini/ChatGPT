@@ -22,7 +22,7 @@ body {
 }
 
 .box_container {
-    width: 60%;
+    width: 70%;
 }
 
 
@@ -39,6 +39,7 @@ footer {
 
 .box {
     background: rgb(64, 65, 79);
+    font-size: .875rem;
 }
 
 .footer_paragraph {
