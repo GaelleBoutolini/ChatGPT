@@ -101,10 +101,6 @@ svg {
     background: transparent;
 }
 
-#groot_mode_container {
-    width: 60%;
-}
-
 #groot_mode label {
     width: 80px;
     height: 40px;
@@ -135,4 +131,12 @@ label span {
     margin-left: 43px;
     background: #5bce5b;
     color: #fff;
+}
+
+@media (max-width:992px) {
+
+    .question_response_container,
+    .container_main {
+        width: 100%;
+    }
 }
