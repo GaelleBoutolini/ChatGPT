@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300&display=swap');
-
 body {
     background-color: #343541;
 }
-
 .navbar_container {
     width: 15%;
 }
-
+.main {
+    width: 85%;
+}
+.box_container {
+    width: 60%;
+}
 .question_response_container,
 .container_main {
     width: 85%;
@@ -15,6 +18,7 @@ body {
 
 .box_container {
     width: 60%;
+    width: 70%;
 }
 
 
@@ -22,8 +26,6 @@ footer {
     background-color: #343541;
     color: aliceblue;
 }
-
-
 #input_container {
     background: rgb(64, 65, 79);
     width: 60%;
@@ -31,71 +33,55 @@ footer {
 
 .box {
     background: rgb(64, 65, 79);
+    font-size: .875rem;
 }
 
 .footer_paragraph {
     font-size: 14px;
 }
-
 input:focus {
     outline: none;
 }
-
 #question {
     background: transparent;
     width: 90%;
 }
-
 #validate {
     background: transparent;
     color: rgb(142, 142, 160);
 }
-
 .user_question {
     background: #202123;
 }
-
 .answer_content {
     background: #343541;
 }
-
 .answer_content p {
     white-space: nowrap;
 }
-
 .typewriter p {
     margin: 0 5px;
 }
-
 @keyframes typing {
     from {
         width: 0;
     }
-
     to {
         width: 100%;
     }
 }
-
 .user_question,
 .answer_content {
     font-family: IBM Plex Mono, monospace;
     font-size: 1rem;
 }
-
 i {
     cursor: pointer;
 }
-
 svg {
     transform: rotate(90deg);
     background: transparent;
 }
-
-#groot_mode_container {
-    width: 60%;
-}
-
 #groot_mode label {
     width: 80px;
     height: 40px;
@@ -104,7 +90,6 @@ svg {
     border-radius: 20px;
     cursor: pointer;
 }
-
 label span {
     width: 34px;
     height: 34px;
@@ -117,13 +102,31 @@ label span {
     font-weight: bold;
     transition: margin-left 0.5s;
 }
-
 #btn_groot {
     display: none;
 }
-
 #btn_groot:checked+label span {
     margin-left: 43px;
     background: #5bce5b;
     color: #fff;
+}
+@media (max-width:992px) {
+    h1 {
+        margin-top: 30px;
+    }
+    .main {
+        width: 100%;
+        position: static !important;
+    }
+    .box_container {
+        width: 100%;
+    }
+    .box-container-principal {
+        width: 100%;
+    }
+    .example,
+    .Capabilities,
+    .Limitations {
+        width: 90%;
+    }
 }

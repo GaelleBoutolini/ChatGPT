@@ -1,21 +1,25 @@
 let questions = ["Bonjour", "comment vas-tu ?", "ça va?", "Qui est-tu ?", "Pouvez-vous m'aider?"];
 let responses = ["Bonjour ! Comment puis-je vous aider aujourd'hui ?", "je vais très bien merci et vous ?", "je vais très bien merci et vous ?", "Je suis ChatGPT, un modèle de traitement du langage développé par OpenAI.", "Oui bien sûr !"]
-let inputQuestion = document.querySelector("#question");
+let inputQuestion = document.querySelector(".question");
 let btnValidate = document.querySelector("#validate");
 let responseContainer = document.querySelector("#response");
 let groot = document.querySelector("#btn_groot");
 let sentencesGroot = ["Je suis Groot !", "Je suis Groot ?", "Je suis Groot.", "Je suis Groot...", "Je suis Groot~", "JE SUIS GROOT !!!!!"]
 let containerMain = document.querySelector(".container_main");
+let inputAndGrootContainer = document.querySelector(".input_groot_container");
 
+
+// Début du js pour apparition de modal
+document.addEventListener('DOMContentLoaded', function () {
+    $('#modal1').modal('show');
+});
 
 document.addEventListener("keydown", (e) => {
     if (e.code === "Enter" || e.KeyboardEvent.keyCode === 13) {
         btnValidate.click();
     }
 })
-
 btnValidate.addEventListener("click", () => {
-
     containerMain.innerHTML = "";
     if (groot.checked) {
         console.log("Je suis dans le mode Groot")
@@ -42,11 +46,14 @@ btnValidate.addEventListener("click", () => {
                 </div>
             </div>
             `;
+        inputQuestion.value = ""
     }
     let dontHaveThisQuestion = false;
     for (let i = 0; i < questions.length; i++) {
         dontHaveThisQuestion = false;
-        if (questions[i] === inputQuestion.value && !groot.checked) {
+        let questionUser = inputQuestion.value;
+        console.log(questions[i])
+        if (questions[i] == questionUser && !groot.checked) {
             dontHaveThisQuestion = false;
             console.log("Je suis dans le mode normal avec une question connue")
             responseContainer.innerHTML += `
@@ -71,7 +78,6 @@ btnValidate.addEventListener("click", () => {
                 </div>
             </div>
             `;
-
             let responseParagraph = document.querySelectorAll(".response_paragraph");
             if (responseParagraph.length !== 0) {
                 console.log(responseParagraph)
@@ -87,9 +93,9 @@ btnValidate.addEventListener("click", () => {
             }
             return;
         } else {
+            console.log("Je ne connais pas cette question");
             dontHaveThisQuestion = true;
         }
-
         let responseParagraph = document.querySelectorAll(".response_paragraph");
         if (responseParagraph.length !== 0) {
             console.log(responseParagraph)
@@ -100,7 +106,7 @@ btnValidate.addEventListener("click", () => {
             for (let j = 0; j < filteredResponses.length; j++) {
                 console.log("Je met des écouteurs sur mes thumbs")
                 filteredResponses[j].style.animation = "none"
-                inputQuestion.value = ""
+                // inputQuestion.value = ""
                 addEventToThumbs();
             }
         }
@@ -108,6 +114,7 @@ btnValidate.addEventListener("click", () => {
     }
     console.log(dontHaveThisQuestion)
     if (dontHaveThisQuestion && !groot.checked) {
+        console.log(inputQuestion.value)
         let unknowResponse = "Je suis désolé, je ne connais pas la réponse à cette question"
         responseContainer.innerHTML += `
             <div class="user_question text-white d-flex justify-content-between align-items-center p-4">   
@@ -132,7 +139,6 @@ btnValidate.addEventListener("click", () => {
                 </div>
             </div>
             `;
-
         let responseParagraph = document.querySelectorAll(".response_paragraph");
         if (responseParagraph.length !== 0) {
             console.log(responseParagraph)
@@ -141,13 +147,13 @@ btnValidate.addEventListener("click", () => {
             let filteredResponses = Array.from(responseParagraph).filter((res, ind) => ind !== index);
             for (let j = 0; j < filteredResponses.length; j++) {
                 filteredResponses[j].style.animation = "none"
-                inputQuestion.value = ""
-                addEventToThumbs();
             }
+            inputQuestion.value = "";
+            addEventToThumbs();
         }
     }
-})
 
+})
 function addEventToThumbs() {
     console.log("Je met des écouteurs sur mes thumbs")
     let thumbsUp = document.querySelectorAll(".thumbUp")
@@ -162,7 +168,6 @@ function addEventToThumbs() {
         }
         )
     }
-
     let thumbsDown = document.querySelectorAll(".thumbDown")
     for (let b = 0; b < thumbsUp.length; b++) {
         thumbsDown[b].addEventListener("click", () => {
